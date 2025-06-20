@@ -6,7 +6,7 @@ namespace Fulll\Domain;
 
 class User
 {
-    private ?Fleet $fleet;
+    private ?int $fleetId;
     public function __construct(private string $email)
     {
     }
@@ -16,13 +16,13 @@ class User
         return $this->email;
     }
 
-    public function getFleet(): ?Fleet
+    public function getFleetId(): ?int
     {
-        return $this->fleet;
+        return $this->fleetId;
     }
 
-    public function setFleet(Fleet $fleet): void
+    public function setFleetId(int $fleetId): void
     {
-        $this->fleet = $fleet;
+        $this->fleetId = $fleetId;
     }
 }

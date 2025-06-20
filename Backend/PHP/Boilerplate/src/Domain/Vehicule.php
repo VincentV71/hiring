@@ -6,6 +6,8 @@ namespace Fulll\Domain;
 
 class Vehicule
 {
+    private array $fleets = [];
+
     public function __construct(private string $plateNumber)
     {
     }
@@ -14,4 +16,15 @@ class Vehicule
     {
         return $this->plateNumber;
     }
+
+    public function addFleet(int $fleetId): void
+    {
+        $this->fleets[] = $fleetId;
+    }
+
+    public function getFleets(): array
+    {
+        return $this->fleets;
+    }
+
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Fulll\App\Command;
 
 use Fulll\App\Interface\UserRepositoryInterface;
@@ -13,6 +15,6 @@ class CreateUserCommandHandler
 
     public function handle(CreateUserCommand $command): User
     {
-        return $this->repository->addUser($command->email);
+        return $this->repository->createUser($command->email);
     }
 }
