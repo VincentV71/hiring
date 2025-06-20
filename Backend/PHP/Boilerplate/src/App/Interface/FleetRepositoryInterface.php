@@ -12,6 +12,7 @@ interface FleetRepositoryInterface
 {
     public function createFleet(int $fleetId, string $email): Fleet;
     public function associateFleetWithUser(Fleet $fleet, User $user): Fleet;
-
     public function associateFleetWithVehicule(Fleet $fleet, Vehicule $vehicule): Fleet;
+
+    public function getVehicules(Fleet $fleet): array;
 }

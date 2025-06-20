@@ -11,5 +11,5 @@ interface VehiculeRepositoryInterface
 {
     public function createVehicule(string $plateNumber): Vehicule;
 
-    public function associateVehiculeWithFleet(Vehicule $vehicule, Fleet $fleet): Vehicule;
+    public function associateVehiculeWithFleet(Vehicule $vehicule, Fleet $fleet): ?Vehicule;
 }

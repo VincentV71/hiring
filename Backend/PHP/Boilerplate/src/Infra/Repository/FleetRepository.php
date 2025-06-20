@@ -30,4 +30,9 @@ class FleetRepository implements FleetRepositoryInterface
 
         return $fleet;
     }
+
+    public function getVehicules(Fleet $fleet): array
+    {
+        return $fleet->getVehicules();
+    }
 }

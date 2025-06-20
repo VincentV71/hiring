@@ -15,8 +15,12 @@ class VehiculeRepository implements VehiculeRepositoryInterface
         return new Vehicule($plateNumber);
     }
 
-    public function associateVehiculeWithFleet(Vehicule $vehicule, Fleet $fleet): Vehicule
+    public function associateVehiculeWithFleet(Vehicule $vehicule, Fleet $fleet): ?Vehicule
     {
+        if(in_array($vehicule->getPlateNumber(), $fleet->getVehicules())) {
+            return null;
+        };
+
         $vehicule->addFleet($fleet->getId());
 
         return $vehicule;
